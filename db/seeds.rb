@@ -3,16 +3,23 @@ User.create!(name:  "hungba",
              phone:     "01676571863",
              password:              "123456",
              password_confirmation: "123456",
-             admin: "1" )
+             admin: "1" ,
+             activated: true,
+             activated_at: Time.zone.now)
 User.create!(name:  "hung1",
              email: "hung1@gmail.com",
              phone:     "01676571234",
              password:              "123456",
              password_confirmation: "123456",
-             admin: "2" )
+             admin: "2",
+             activated: true,
+             activated_at: Time.zone.now
+             )
 User.create!(name:  "hung2",
              email: "hung2@gmail.com",
              phone:     "01676551234",
              password:              "123456",
              password_confirmation: "123456",
-             admin: "3" )
+             admin: "3",
+             activated: true,
+             activated_at: Time.zone.now )
