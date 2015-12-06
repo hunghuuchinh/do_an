@@ -1,6 +1,8 @@
 <li class ="user_row">
   <div class ="col-md-12 ">
-  <div class ="col-md-4"><%= link_to user.name, user %>
+  <div class ="col-md-4">
+  <%= user.id %>.
+  <%= link_to user.name, user %>
   </div>
   <div class ="col-md-2 col-md-offset-6" >
   <% if (current_user.admin=="1")  && !current_user?(user) %>

@@ -21,3 +21,8 @@
 
 en:
   hello: "Hello world"
+  #en:
+  #activerecord:
+ #   errors:
+     # messages:
+       # blank: "không được bỏ trống"

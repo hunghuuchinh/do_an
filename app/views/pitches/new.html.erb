@@ -1,0 +1,43 @@
+<% provide(:title, 'Pitch') %>
+<h1>Create Pitch</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@pitch, html: { multipart: true }) do |f| %>
+    <%= render 'shared/error_messages', object: f.object  %>
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control' %>
+
+      <%= f.label :address %>
+      <%= f.text_field :address, class: 'form-control' %>
+
+      <%= f.label :quantity %>
+      <%= f.text_field :quantity, placeholder: "must be integer",   class: 'form-control' %>
+
+      <%= f.label :rent_shoes, class: "checkbox inline" do %>
+        <%= f.check_box :rent_shoes %>
+        <span>Have rent shoes</span>
+      <% end %>
+      <%= f.label :rent_kit, class: "checkbox inline" do %>
+        <%= f.check_box :rent_kit %>
+        <span>Have rent  kit</span>
+      <% end %>
+      <%= f.label :sell_water, class: "checkbox inline" do %>
+        <%= f.check_box :sell_water %>
+        <span>Have sell water</span>
+      <% end %>
+      <%= f.label :county %>
+      <%= f.select :county, options_for_select([['Ba Dinh','Ba Dinh'], ['Hoan Kiem','Hoan Kiem'],['Tay Ho','Tay Ho'],['Long Bien','Long Bien'],['Cau Giay','Cau Giay'],['Dong Da','Dong Da'],['Hai Ba Trung','Hai Ba Trung'],['Hoang Mai','Hoang Mai'],['Thanh Xuan','Thanh Xuan'],['Ha Dong','Ha Dong'],['Bac Tu Liem', 'Bac Tu Liem'],['Nam Tu Liem','Nam Tu Liem']]) %>
+
+      <%= f.label :cost %>
+      <%= f.text_field :cost,placeholder: "viet nam dong unit", class: 'form-control' %>
+      <%= f.hidden_field :lat %>
+      <%= f.hidden_field :lng %>
+
+      <div id="googleMap" style="width:500px;height:500px;"></div>
+
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d57940159.301989205!2d-108.41366786261982!3d27.58153906267132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1449396413886" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+      <%= f.submit "Create my pitch", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
