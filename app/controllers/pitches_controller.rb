@@ -1,6 +1,5 @@
 class PitchesController < ApplicationController
-	  before_action :logged_in_user
-
+	 before_action :logged_in_user, only: [ :edit, :update, :destroy, :create, :new]
 	def index
 		@pitches = @search.result
 	end
@@ -22,11 +21,11 @@ class PitchesController < ApplicationController
 	    end
 	end
 	def edit
-		
+
 	end
 
 	def destroy
-		
+
 	end
 
 	 private
