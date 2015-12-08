@@ -1,0 +1,32 @@
+.modal-title {
+  text-align: center;
+}
+
+.modal-dialog {
+  margin-top: 110px;
+}
+
+.modal-title {
+  font-size: 30px;
+}
+
+.another_login {
+  padding-right: 25px;
+  .lead {
+    margin-bottom: 10px;
+  }
+
+  a {
+    margin-bottom: 7px;
+  }
+}
+
+.btn-signin {
+  background: #4CA9EC;
+  border-color: #4CA9EC;
+}
+
+.btn-signin:hover {
+  background: #2C9BEA;
+  border-color: #2C9BEA;
+}

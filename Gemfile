@@ -10,6 +10,7 @@ gem 'bootstrap-will_paginate', '0.0.10'
 gem 'net-ssh'
 gem 'gmaps4rails'
 gem 'underscore-rails'
+gem "font-awesome-rails"
 
 
 gem 'rails',        '4.2.2'
